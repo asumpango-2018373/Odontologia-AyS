@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelsumpango.controller.DoctorController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="225.0" style="-fx-background-color: #117267;">
+         <children>
+            <VBox layoutX="23.0" layoutY="158.0" prefHeight="214.0" prefWidth="180.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="110.0" fitWidth="122.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Doctores.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="124.0" text="DOCTORES" textFill="#fff8f8">
+               <font>
+                  <Font name="Cooper Black" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="52.0" layoutX="14.0" layoutY="363.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="225.0" layoutY="-1.0" prefHeight="403.0" prefWidth="877.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="403.0" fitWidth="336.0" layoutX="541.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+               <image>
+                  <Image url="@../image/FondoPacientes.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblDoctores" layoutX="15.0" layoutY="126.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="842.0" stylesheets="@../resource/OdontologiaA&amp;SCSS.css">
+              <columns>
+                <TableColumn fx:id="colNumeroColegiado" prefWidth="135.0" text="Num. Colegiado" />
+                <TableColumn fx:id="colNombresDoctor" prefWidth="211.0" text="Nombres Doctor" />
+                  <TableColumn fx:id="colApellidosDoctor" minWidth="0.0" prefWidth="234.0" text="Apellidos Doctor" />
+                  <TableColumn fx:id="colTelefonoContacto" minWidth="0.0" prefWidth="138.0" text="Télefono Contacto" />
+                  <TableColumn fx:id="colCodigoEspecialidad" prefWidth="123.0" text="Cod. Especialidad" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <GridPane fx:id="grpFechas" layoutX="295.0" layoutY="16.0" prefHeight="84.0" prefWidth="745.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="147.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="173.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="162.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="145.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="29.0" minHeight="8.0" prefHeight="28.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="28.0" prefWidth="164.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Número Colegiado" />
+            <Label prefHeight="28.0" prefWidth="134.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Nombres Doctor" GridPane.columnIndex="2" />
+            <Label prefHeight="28.0" prefWidth="133.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Apellidos Doctor" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="141.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Especialidad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="37.0" prefWidth="129.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Télefono Contacto" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNumeroColegiado" editable="false" prefHeight="25.0" prefWidth="67.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombresDoctor" editable="false" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtApellidosDoctor" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoEspecialidad" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTelefonoContacto" editable="false" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

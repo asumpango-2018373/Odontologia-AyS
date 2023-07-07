@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelsumpango.controller.UsuarioController">
+   <children>
+      <Pane prefHeight="608.0" prefWidth="754.0" style="-fx-background-color: #117267;">
+         <children>
+            <Label layoutX="91.0" layoutY="35.0" prefHeight="96.0" prefWidth="396.0" text="USUARIO" textAlignment="CENTER" textFill="#28dee1">
+               <font>
+                  <Font name="Britannic Bold" size="96.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="42.0" layoutY="144.0" prefHeight="387.0" prefWidth="494.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="206.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="288.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="202.0" text="Código Usuario" textFill="#fff8f8">
+                     <font>
+                        <Font name="Cooper Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="46.0" prefWidth="202.0" text="Nombre Usuario" textFill="#fff8f8" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Cooper Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="46.0" prefWidth="202.0" text="Apellido Usuario" textFill="#fff8f8" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Cooper Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="212.0" prefHeight="46.0" prefWidth="202.0" text="Usuario" textFill="#fff8f8" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Cooper Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="300.0" prefHeight="46.0" prefWidth="202.0" text="Contraseña" textFill="#fff8f8" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Cooper Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoUsuario" blendMode="COLOR_DODGE" prefHeight="29.0" prefWidth="288.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtNombreUsuario" blendMode="COLOR_DODGE" layoutX="216.0" layoutY="35.0" prefHeight="29.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtApellidoUsuario" blendMode="COLOR_DODGE" layoutX="216.0" layoutY="113.0" prefHeight="29.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtUsuario" blendMode="COLOR_DODGE" layoutX="216.0" layoutY="191.0" prefHeight="29.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtPassword" blendMode="COLOR_DODGE" layoutX="216.0" layoutY="268.0" prefHeight="29.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane layoutX="549.0" layoutY="-50.0" prefHeight="743.0" prefWidth="807.0" style="-fx-background-color: Skyblue; -fx-background-radius: 98%;">
+         <children>
+            <ImageView fitHeight="311.0" fitWidth="324.0" layoutX="99.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Usuario.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="136.0" layoutY="372.0" prefHeight="150.0" prefWidth="281.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="68.0" prefWidth="283.0" styleClass="button3" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="51.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/NuevoDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#ventanaLogin" prefHeight="68.0" prefWidth="283.0" styleClass="button3" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/EliminarDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

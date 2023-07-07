@@ -1,0 +1,146 @@
+.background {
+    -fx-background-color: #1d1d1d;
+}
+
+.label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Cooper Black";
+    -fx-text-fill: black;
+}
+
+.label2{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+}
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: white;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: blue;
+}
+
+.pane{
+    -fx-border-radius: 50%;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#047b8a,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: whitesmoke;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: greenyellow;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+
+.button1{
+    -fx-background-color:  #117267;
+}
+
+.button1:hover{
+    -fx-background-color: gray;
+}
+
+.button1:pressed{
+    -fx-background-color: #071517;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   #326D6B;
+    
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-alignment: CENTER;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ }
+ 
+.button2{
+    -fx-background-color:   #4db6ac;
+}
+
+.button2:hover{
+    -fx-background-color: gray;
+}
+
+.button2:pressed{
+    -fx-background-color: #071517;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.label3{
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+}
+
+.table-view2 .column-header,
+.table-view2 .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:    #4db6ac;
+    
+}
+.table-view2 .column-header .label{
+   -fx-text-fill: #181d4d;
+   -fx-alignment: CENTER;
+}
+.table-view2 .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ }
+ 
+ .button3{
+    -fx-background-color:   skyblue;
+}
+
+.button3:hover{
+    -fx-background-color: blue;
+}
+
+.button3:pressed{
+    -fx-background-color: #071517;
+    -fx-background-radius: 30 30 30 30;
+}

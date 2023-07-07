@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelsumpango.controller.ProgramadorController">
+   <children>
+      <Pane prefHeight="408.0" prefWidth="397.0" style="-fx-background-color: #117267;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="54.0" prefWidth="309.0" text="PROGRAMADOR" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="39.0" />
+               </font>
+            </Label>
+            <VBox layoutX="9.0" layoutY="52.0" prefHeight="317.0" prefWidth="253.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="255.0" text="AXEL OCTAVIO " textAlignment="CENTER" textFill="#070000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="255.0" text="SUMPANGO CUNIL" textAlignment="CENTER" textFill="#070000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="54.0" prefWidth="257.0" text="IN5AV" textAlignment="JUSTIFY" textFill="#070000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="54.0" prefWidth="80.0" text="PE5DV" textAlignment="CENTER" textFill="#070000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="54.0" prefWidth="116.0" text="2018373" textAlignment="CENTER" textFill="#170000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="54.0" prefWidth="221.0" text="PROGRAMADOR JR." textAlignment="CENTER" textFill="#070000">
+                     <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="36.0" fitWidth="80.0" layoutX="14.0" layoutY="369.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="255.0" layoutY="-102.0" prefHeight="580.0" prefWidth="529.0" style="-fx-background-color: Skyblue; -fx-background-radius: 98%;">
+         <children>
+            <Circle fill="#117267" layoutX="278.0" layoutY="504.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#117267" layoutX="213.0" layoutY="422.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#117267" layoutX="65.0" layoutY="347.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="301.0" fitWidth="277.0" layoutX="56.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Programador.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#117267" layoutX="101.0" layoutY="486.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="97.0" layoutY="476.0" text="asumpango-2018373@kinal.edu.gt">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Circle fill="#117267" layoutX="137.0" layoutY="114.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#117267" layoutX="47.0" layoutY="200.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#117267" layoutX="314.0" layoutY="411.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#117267" layoutX="278.0" layoutY="132.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

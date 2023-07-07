@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelsumpango.controller.CitaController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="225.0" style="-fx-background-color: #117267;">
+         <children>
+            <VBox layoutX="23.0" layoutY="158.0" prefHeight="214.0" prefWidth="180.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/NuevoMedi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/EliminarMedi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/EditarMedi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="51.0" prefWidth="180.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ReporteMedi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="110.0" fitWidth="122.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Citas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="65.0" layoutY="124.0" text="CITAS" textFill="#fff8f8">
+               <font>
+                  <Font name="Cooper Black" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="52.0" layoutX="14.0" layoutY="363.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="225.0" layoutY="-1.0" prefHeight="403.0" prefWidth="877.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="403.0" fitWidth="336.0" layoutX="541.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+               <image>
+                  <Image url="@../image/FondoPacientes.png" />
+               </image>
+            </ImageView>
+            <GridPane fx:id="grpFechas" layoutX="19.0" layoutY="6.0" prefHeight="110.0" prefWidth="842.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="131.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="111.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="142.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="195.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="96.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="167.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="37.0" prefWidth="126.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Cita" />
+                  <Label prefHeight="37.0" prefWidth="74.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Fecha Cita" GridPane.columnIndex="2" />
+                  <Label prefHeight="37.0" prefWidth="72.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Hora Cita" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                  <Label prefHeight="37.0" prefWidth="139.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Paciente" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label prefHeight="37.0" prefWidth="82.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Tratamiento" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label prefHeight="37.0" prefWidth="97.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Cond. Actual" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label prefHeight="37.0" prefWidth="133.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Número Colegiado" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtCodigoCita" editable="false" prefHeight="25.0" prefWidth="67.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtCondicionActual" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCodigoPaciente" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbNumeroColegiado" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtTratamiento" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtHoraCita" editable="false" GridPane.columnIndex="5" />
+               </children>
+            </GridPane>
+            <TableView fx:id="tblCitas" layoutX="15.0" layoutY="126.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="842.0" stylesheets="@../resource/OdontologiaA&amp;SCSS.css">
+              <columns>
+                <TableColumn fx:id="colCodigoCita" prefWidth="92.0" text="Código Cita" />
+                <TableColumn fx:id="colFechaCita" prefWidth="116.0" text="Fecha Cita" />
+                  <TableColumn fx:id="colHoraCita" minWidth="0.0" prefWidth="100.0" text="Hora Cita" />
+                  <TableColumn fx:id="colTratamiento" prefWidth="121.0" text="Tratamiento" />
+                  <TableColumn fx:id="colCondicionActual" prefWidth="184.0" text="Descr. Condición Actual" />
+                  <TableColumn fx:id="colCodigoPaciente" prefWidth="111.0" text="Cod. Paciente" />
+                  <TableColumn fx:id="colNumeroColegiado" prefWidth="115.0" text="Num. Colegiado" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelsumpango.controller.DetalleRecetaController">
+   <children>
+      <Pane layoutX="-8.0" layoutY="-4.0" prefHeight="611.0" prefWidth="365.0" style="-fx-background-color: #117267;">
+         <children>
+            <VBox layoutX="45.0" layoutY="251.0" prefHeight="287.0" prefWidth="281.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="68.0" prefWidth="283.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="51.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/NuevoDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="68.0" prefWidth="283.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/EliminarDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#editar" prefHeight="68.0" prefWidth="283.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/EditarDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" onAction="#reporte" prefHeight="68.0" prefWidth="283.0" styleClass="button1" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ReporteDR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="130.0" fitWidth="126.0" layoutX="120.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/DetallesRecetas.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="143.0" prefHeight="43.0" prefWidth="336.0" text="DETALLE DE" textFill="#fff8f8">
+               <font>
+                  <Font name="Cooper Black" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="72.0" layoutX="14.0" layoutY="547.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Home.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="186.0" prefHeight="43.0" prefWidth="336.0" text="RECETAS" textFill="#fff8f8">
+               <font>
+                  <Font name="Cooper Black" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="357.0" layoutY="-1.0" prefHeight="601.0" prefWidth="745.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="403.0" fitWidth="336.0" layoutX="409.0" layoutY="-11.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+               <image>
+                  <Image url="@../image/FondoPacientes.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblDetalleRecetas" layoutX="31.0" layoutY="232.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="344.0" prefWidth="683.0" stylesheets="@../resource/OdontologiaA&amp;SCSS.css">
+              <columns>
+                <TableColumn fx:id="colCodigoDetalleReceta" prefWidth="135.0" text="Código Det. Receta" />
+                <TableColumn fx:id="colDosis" prefWidth="280.0" text="Dosis" />
+                  <TableColumn fx:id="colCodigoReceta" minWidth="0.0" prefWidth="121.0" text="Código Receta" />
+                  <TableColumn fx:id="colCodigoMedicamento" minWidth="0.0" prefWidth="146.0" text="Código Medicamento" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <GridPane fx:id="grpFechas" layoutX="390.0" layoutY="49.0" prefHeight="140.0" prefWidth="683.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="159.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="134.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="265.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="56.0" prefWidth="161.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Detalle Receta" />
+            <Label prefHeight="28.0" prefWidth="166.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Medicamento" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="37.0" prefWidth="101.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Código Receta" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDosis" editable="false" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtCodigoDetalleReceta" editable="false" layoutX="161.0" layoutY="89.0" prefHeight="34.0" prefWidth="173.0" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" layoutX="326.0" layoutY="87.0" prefHeight="37.0" prefWidth="85.0" styleClass="label2" stylesheets="@../resource/OdontologiaA&amp;SCSS.css" text="Dosis" GridPane.columnIndex="2" />
+            <ComboBox fx:id="cmbCodigoMedicamento" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoReceta" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
